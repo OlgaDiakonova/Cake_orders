@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Order form</title>
+    <script src="js/order.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+    <h1>Cake order</h1>
+    <div class="main">
+        <form method="post" action="https://httpbin.org/post" onsubmit="return formValidation();" onreset="clearErrors();">
+            <fieldset>
+                <p>
+                    <label><span style="color: red">*</span>Pick up date:</label>
+                    <input type="date" data-date-inline-picker="true" name="date" id="date" autocomplete="off" onclick="setData()" onchange="setTime()"/>
+
+                    <label><span style="color: red">*</span>Pick up time:</label>
+                    <select id="date_time" name="time" required></select>
+
+                </p>
+                <hr />
+                <p>
+                    <label><span style="color: red">*</span>Cake type: </label>
+                    <select name="cake_type" id="cakes" autocomplete="off" onchange="fillSizes()" required>
+                    </select>
+
+                    <label><span style="color: red">*</span>Cake size: </label>
+                    <select name="cake_size" id="sizes" autocomplete="off" required>
+                    </select>
+                </p>
+
+                <hr />
+                <p>
+                    <label>Signing(optional): </label>
+                    <input type="text" name="sign" id="sign" size="100" />
+                </p>
+                <p>
+                    <label>Comments: </label>
+                    <textarea name="comments" rows="5" ></textarea> 
+
+                </p>
+                <hr />
+                <p>
+                    <label>Name: </label>
+                    <input type="text" name="name" id="name" />
+                    <label><span style="color: red">*</span>Phone number: </label>
+                    <input type="tel" name="tel" id="tel" pattern="^\d{3}[\-]\d{3}[\-]\d{4}$" placeholder="XXX-XXX-XXXX" title=" XXX-XXX-XXXX" required size="30" />
+                </p>
+            </fieldset>
+            <hr />
+            <span >
+                <input class="buttons" type="submit" value="Submit order" />
+                <input class="buttons" type="reset" value="Cancel" />
+            </span>
+
+        </form>
+
+    </div>
+</body>
+</html>

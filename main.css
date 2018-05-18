@@ -1,0 +1,36 @@
+﻿body {
+    background-image: url(img/bakery_img3.jpg);
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+
+.main {
+    margin: auto;
+    width: 80%;
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    text-align: right;
+    /*float: left;*/
+    margin-bottom: 3px;
+    margin-top: 3px;
+    width: 120px;
+}
+
+input, select, textarea {
+    width: 200px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
